@@ -19,7 +19,7 @@
                     <div class="bg-white hover:bg-blue-100 border border-gray-200 p-5">
                         <h2 class="font-bold text-lg mb-4"> {{ $post->title }} </h2>
                         <p class="text-xs"> {{ $post->excerpt }}</p>
-                        <p class="text-xs text-right"> {{ $post->published_at }}</p>
+                        <p class="text-xs text-right"> {{ $post->created_at }}</p>
                     </div>
                 @endforeach
             </div>
