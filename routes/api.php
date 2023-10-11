@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::apiResource('v1/post', PostV1::class)->only(['index', 'show', 'destroy']);
-Route::apiResource('v2/post', PostV2::class)->only(['index', 'store', 'show', 'update', 'destroy']);
+Route::apiResource('v1/post', PostV1::class)->only(['index', 'show', 'destroy'])->middleware('auth:sanctum');
+Route::apiResource('v2/post', PostV2::class)->only(['index', 'store', 'show', 'update', 'destroy'])->middleware('auth:sanctum');
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
